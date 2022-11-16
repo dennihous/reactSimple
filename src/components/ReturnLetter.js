@@ -1,5 +1,6 @@
 // const props = {char, handleClick}
 
-export const ReturnLetter = (props) => {
-  return <button onClick={() => props.highLightLetter(props.letter)}>{props.letter}</button>
+export const ReturnLetter = ({highLightLetter, letter}) => {
+  return <button onClick={() => highLightLetter(letter)}>{letter}</button>
 }
+

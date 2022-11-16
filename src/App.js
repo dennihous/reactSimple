@@ -1,5 +1,6 @@
 import './App.css';
 import { ReturnLetter } from "./components/ReturnLetter";
+import { Element } from "./components/Element";
 import React, { useState } from 'react';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         return <ReturnLetter letter={char} highLightLetter={setElement} />
         })}
       </div>
-      <h1>{element}</h1>
+      <Element element={element} />
     </div>
   );
 }
