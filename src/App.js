@@ -1,6 +1,7 @@
 import './App.css';
-import { ReturnLetter } from "./components/ReturnLetter";
+// import { ReturnLetter } from "./components/ReturnLetter";
 import { Element } from "./components/Element";
+import { Letters } from "./components/Letters";
 import React, { useState } from 'react';
 
 function App() {
@@ -12,11 +13,7 @@ function App() {
       <br />
       <br />
       <br />
-      <div>
-        {word.split("").map(char => {
-        return <ReturnLetter letter={char} highLightLetter={setElement} />
-        })}
-      </div>
+      <Letters setElement={setElement} word={word} />
       <Element element={element} />
     </div>
   );
