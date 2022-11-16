@@ -4,7 +4,7 @@ import { Element } from "./components/Element";
 import React, { useState } from 'react';
 
 function App() {
-  const word = "Hello"
+  const word = "Dennis"
   const [element, setElement] = useState("");
 
   return (
