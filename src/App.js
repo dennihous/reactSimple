@@ -41,11 +41,10 @@ function App() {
   const word = "Dennis"
   const [element, setElement] = useState("");
 
-  const handleClick = () => {
-    console.log(element)
-    const hello = "hello"
+  const handleClick = (char) => {
+    // console.log(element)
     if(element === ""){
-      setElement(hello)
+      setElement(char)
     } else {
       setElement("")
     }
