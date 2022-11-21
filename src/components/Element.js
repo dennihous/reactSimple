@@ -1,3 +1,5 @@
-export const Element = (props) => {
-  return <h1>{props.element}</h1>
+export const Element = ({element}) => {
+  // console.log(element)
+  return <h1>{ element }</h1>
 }
+
