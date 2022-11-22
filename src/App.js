@@ -1,5 +1,7 @@
 import './App.css';
-// import { Element } from "./components/Element";
+import { Element } from "./components/Element";
+// import { ReturnLetter } from './components/ReturnLetter';
+import { OnClick } from './components/OnClick';
 // import { Letters } from "./components/Letters";
 import React, { useState } from 'react';
 
@@ -12,52 +14,21 @@ import React, { useState } from 'react';
 //       <br />
 //       <br />
 //       <br />
-//       <Letters set={setElement} word={word} />
-//       <Element element={element} />
+//       <Letters setElement={setElement} word={word} element={element} />
+      
 //     </div>
 //   );
-// }
-
-// function App() {
-//   const [word, setWord] = useState("")
-
-//   const handleClick = () => {
-//     if(word === ""){
-//       setWord("Dennis")
-//     } else {
-//       setWord("")
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <button onClick={handleClick}>K</button>
-//       <div> {word}</div>
-//     </div>
-//   )
 // }
 
 function App() {
   const word = "Dennis"
   const [element, setElement] = useState("");
 
-  const handleClick = (char) => {
-    // console.log(element)
-    if(element === ""){
-      setElement(char)
-    } else {
-      setElement("")
-    }
-  }
-
   return (
     <div className="App">
-      <div>
-        {word.split("").map(char => {
-          return <button onClick={() => handleClick(char)}>{char}</button>
-        })}
-      </div>
-      <h1>{element}</h1>
+      <OnClick word={word} setElement={setElement} element={element} />
+      {/* <Letters setElement={setElement} word={word} element={element} /> */}
+      <Element element={element} />
     </div>
   );
 }

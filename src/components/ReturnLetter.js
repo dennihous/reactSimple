@@ -1,12 +1,5 @@
-export const ReturnLetter = ({highLightLetter, letter}) => {
+export const ReturnLetter = ({handleClick, letter}) => {
   return <button onClick={() => {
-    // console.log(letter)
-    // if(letter.length === 0){
-    //   highLightLetter("")
-    // } else {
-    //   highLightLetter(letter)
-    // }    
-    highLightLetter(letter)
+    handleClick(letter)
   }}>{letter}</button>
 }
-
